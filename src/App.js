@@ -1,23 +1,13 @@
-import "./App.css"
-import Header from "./components/Header"
-import "bootstrap/dist/css/bootstrap.min.css"
-import CardContainer from "./components/CardContainer"
-import { data } from "./utils/data"
-
+import Container from "react-bootstrap/Container";
+import CardContainer from "./components/CardContainer";
+import Header from "./components/Header";
 function App() {
   return (
-    <div className="App bg-warning">
+    <Container className="text-center mt-4">
       <Header />
-      {data.map(({ name, img, statistics }, index) => (
-          <CardContainer
-            key={index}
-            img={img}
-            name={name}
-            statistics={statistics}
-          />
-        ))}
-    </div>
-  )
+      <CardContainer />
+    </Container>
+  );
 }
 
-export default App
+export default App;
